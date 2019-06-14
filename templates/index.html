@@ -32,12 +32,13 @@
 <div class="index-graybox item" id="flow">
 	<div class="wl index-graycon">
 		<div class="index-announce">
-			<a href="#" class="index-announce-til">最新公告</a>
+			<a href="{% url 'new:new_list'%}?classify=announcement" class="index-announce-til">最新公告</a>
 			<div class="index-announce-inc">
 				<div class="announce-info">
 					<ul>
-                        <li>111</li>
-                        <li>dsad</li>
+                        {% for announcement in announcements %}
+                        <li>{{ announcement.title }}</li>
+                        {% endfor %}
 					</ul>
 				</div>
 				<div class="announce-btn">
@@ -210,25 +211,31 @@
 </div>
 <div class="wl index-newsbox item" id="news">
 	<div class="til">
-		<span class="c1">资讯中心</span>|<span class="f2">News</span><a href="news.html" target="_blank" class="fr c1">More+</a>
+		<span class="c1">资讯中心</span>|<span class="f2">News</span>
+        <a href="{% url 'new:new_list' %}" target="_blank" class="fr c1">More+</a>
 	</div>
 	<div class="newsboxi">
 		<div class="newsboxi-b">
-			<h2>太象科技成功在上海股权交易中心挂牌</h2>
+            <a href="http://gsxt.ngsh.gov.cn:9080/ECPS/company/detail.jspx?id=2AE01080E2BDD2EDDA6A4DFF633722E7&jyzk=jyzc" target="_blank">
+                <h2>星之羽网络科技有限责任公司成立</h2>
+            </a>
 			<p>
-				2015年4月28日10时，浙江太象科技有限公司成功在上海股权托管交易中心Q版正式挂牌，企业简称：太象科技，企业代码：205168。仪式上，上海股交中心为浙江太象科技有限公司授牌，公司董事在董事长楼东亮带领下为企业挂牌敲锣。 登陆上海股交中心 助力小微企业发展 上海股权托…
+				2019年1月29日，星之羽网络科技有限责任公司成功在宁夏正式挂牌
+                <br>
+                企业简称：星之羽。
+                <br>
+                企业代码：91640522MA771D71XT。
+
 			</p>
-			<a href="news/show-203.html" target="_blank" class="btn-look">查看</a>
+			<a href="" target="_blank" class="btn-look">查看</a>
 		</div>
 		<div class="newsboxi-b">
 			<ul>
-				<li><a href="news_d.html" target="_blank">互联网金融：监管须尽快补位</a><span>[2015-04-17]</span></li>
-				<li><a href="news_d.html" target="_blank">风险淮安样本：5000万连锁漩涡牵出银行内案</a><span>[2015-04-16]</span></li>
-				<li><a href="news_d.html" target="_blank">网贷行业协会：抱团自律 占山为王？</a><span>[2015-04-15]</span></li>
-				<li><a href="news_d.html" target="_blank">风控成为网贷统一征信系统的难题</a><span>[2015-04-14]</span></li>
-				<li><a href="news_d.html" target="_blank">网贷“野蛮”生长 亟待监管政策落地</a><span>[2015-04-13]</span></li>
-				<li><a href="news_d.html" target="_blank">网贷平台数量爆发式增长</a><span>[2015-04-10]</span></li>
-				<li><a href="news_d.html" target="_blank">中国央行或牵头监管互联网金融</a><span>[2015-04-09]</span></li>
+                {% for new in news %}
+                    <li class="nt"><a href="{% url 'new:article' new.classify new.id %}" target="_blank">{{ new.title }}</a>
+                        <span>[{{ new.add_time }}]</span></li>
+                {% endfor %}
+
 			</ul>
 		</div>
 	</div>

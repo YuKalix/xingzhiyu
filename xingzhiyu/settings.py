@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     # app
     'apps.index',
     'apps.new',
+    # 富文本编辑器
+    'ckeditor',
+    'ckeditor_uploader',
+    # 分页
+    'pure_pagination',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +134,64 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+
+
+# 分页配置
+PAGINATION_SETTINGS = {
+    'PAGE_RANGE_DISPLAYED': 10,
+    'MARGIN_PAGES_DISPLAYED': 2,
+
+    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+}
+
+
+# ckeditor config
+
+CKEDITOR_UPLOAD_PATH = 'new_article_files/'
+CKEDITOR_JQUERY_URL ='js/jquery-3.2.1.min.js'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'language': 'zh-cn',
+        'toolbar_YourCustomToolbarConfig': [
+
+            {'name': 'clipboard', 'items': ['Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord']},
+            {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']},
+            {'name': 'insert', 'items': ['Image', 'Table', 'HorizontalRule', 'Smiley']},
+            {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+            {'name': 'editing', 'items': ['Find', 'Replace', '-']},
+            {'name': 'tools', 'items': ['Maximize']},
+            '/',
+            {'name': 'styles', 'items': ['Format', 'Font', 'FontSize']},
+            {'name': 'basicstyles',
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat']},
+            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            {'name': 'paragraph',
+             'items': ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
+            {'name': 'document', 'items': ['Source']},
+        ],
+        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
+        'width': '100%',
+        'tabSpaces': 4,
+        'extraPlugins': ','.join([
+            'uploadimage',  # the upload image feature
+            # your extra plugins here
+            'div',
+            'autolink',
+            'autoembed',
+            'embedsemantic',
+            'autogrow',
+            'widget',
+            'lineutils',
+            'clipboard',
+            'dialog',
+            'dialogui',
+            'elementspath'
+        ]),
+    }
+}
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
+CKEDITOR_BROWSE_SHOW_DIRS = True

@@ -100,7 +100,7 @@ url('../font/zfgz-yy.ttf');
 
 
 /*page*/
-#page {padding:2px; margin: 10px 0 0 0;  text-align: center;width: 100%;position: relative;} 
+#page {padding:2px; margin: 10px 0 0 0;  text-align: center;width: 100%;position: relative;}
 #page a { padding: 0.1em  0.3em; margin: 2px; color: #0a3572; background-color: #fff;border: 1px solid #0a3572} 
 #page a:hover { background-color: #f6ab25;color: #fff;} 
 #page a:active {background-color: #f6ab25} 

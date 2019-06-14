@@ -6,13 +6,13 @@ from .models import *
 
 # 配置后台基本设置
 # 设置base_site.html的Footer
-admin.site.site_header = 'YuKalix小小窝'
+admin.site.site_header = '星之羽后台管理'
 # 设置base_site.html的Title
-admin.site.site_title = 'YuKalix博客后台管理'
+admin.site.site_title = '星之羽后台管理'
 # 设置base_site.html的Footer
 admin.site.site_footer = 'YuKalix小小窝'
 
-admin.site.index_title = '后台管理'
+admin.site.index_title = '星之羽后台管理'
 
 @admin.register(Information)
 class InformaticaAdmin(admin.ModelAdmin):

@@ -323,7 +323,7 @@
 .newsbox .main li .inside .picbox{width: 137px; height: 122px;float: left;overflow: hidden;}
 .newsbox .main li .inside p{float: right;line-height: 28px;height: 84px; overflow: hidden;width:830px }
 .newsbox .main li .inside span{position: absolute;bottom: 18px;}
-.newsbox .main li .inside .views{right: 98px;}
+.newsbox .main li .inside .views{right: 120px;}
 .newsbox .main li .inside .datetime{right: 8px}
 .newsbox .main li a{color: #7c7c7c;}
 .newsbox .main li:hover{background-color: #f4f4f4;}
