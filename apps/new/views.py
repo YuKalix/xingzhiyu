@@ -39,7 +39,7 @@ class NewList(View):
         except PageNotAnInteger:
             page = 1
         # 这里指从allorg中取五个出来，每页显示5个
-        p = Paginator(news, 2)
+        p = Paginator(news,5)
         news = p.page(page)
 
 

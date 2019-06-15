@@ -2,11 +2,11 @@
 	<div class="inner wl">
 		<a href="index.html">首页</a>|
         <a href="productcentre.html">产品中心</a>|
-        <a href="SuccessCase.html">成功案例</a>|
+        <a href="{% url 'success_case:index' %}">成功案例</a>|
         <a href="server.html">服务项目</a>|
-        <a href="safe.html">安全理念</a>|
+        <a href="{% url 'safe:index' %}">安全理念</a>|
         <a href="{% url 'new:new_list' %}">新闻动态</a>|
-        <a href="about.html">关于我们</a>
+        <a href="{% url 'about_us:index' %}">关于我们</a>
 {#		<p>#}
 {#			公司地址：宁夏 联系电话：17609570714#}
 {#            QQ：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=705301804&site=qq&menu=yes">705301804</a>#}

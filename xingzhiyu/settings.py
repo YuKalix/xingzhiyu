@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # app
-    'apps.index',
-    'apps.new',
+    'apps.index',# 首页
+    'apps.success_case', # 成功案例
+    'apps.new', # 新闻动态
+    'apps.server',
+    'apps.safe',
+    'apps.about_us', # 关于我们
     # 富文本编辑器
     'ckeditor',
     'ckeditor_uploader',

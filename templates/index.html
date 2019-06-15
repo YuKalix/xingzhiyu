@@ -232,7 +232,7 @@
 		<div class="newsboxi-b">
 			<ul>
                 {% for new in news %}
-                    <li class="nt"><a href="{% url 'new:article' new.classify new.id %}" target="_blank">{{ new.title }}</a>
+                    <li class="nt"><a href="{% url 'new:article' new.classify new.id %}" target="_blank">{{ new.title | slice:':5' }}</a>
                         <span>[{{ new.add_time }}]</span></li>
                 {% endfor %}
 
@@ -313,7 +313,7 @@
 <div id="rig-suspend">
 	<div class="toptil">
 		<p class="fs16">
-			{{ information.name}}
+			{{ information.name | slice:':5'}}
 		</p>
 		<p style="color:#000;font-size:16px">
             {{ information.mobile }}
@@ -330,7 +330,7 @@
 		<a href="content/about.html">公司地址</a>
 	</div>
 	<div class="colbox sus-news">
-		<a href="news.html">新闻动态</a>
+		<a href="{% url 'new:new_list' %}">新闻动态</a>
 	</div>
 	<div class="colbox sus-about">
 		<a href="content/about.html">关于我们</a>

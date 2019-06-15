@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}关于我们{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/map.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<body id="body">
+
+<!--banner-->
+<div class="banner" style="background: url({% static 'images/idea_banner.jpg' %}) center no-repeat;height:400px">
+</div>
+<!--banner end-->
+<!--公告联系方式-->
+<div class="index-graybox item" id="flow">
+	<div class="wl index-graycon">
+		<!--联系方式-->
+		<div class="index-contact">
+			<a target='_blank' href="#">
+			<em class="icons ico-phone"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>咨询热线：</span><em>400-123-123</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+			<a target='_blank' href="#">
+			<em class="icons ico-qq"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>企业QQ：</span><em>705301804</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+			<a href="#">
+			<em class="icons ico-msg"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>邮箱地址：</span><em>705301804@qq.com</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+		</div>
+		<!--联系方式end-->
+		<!--制作流程-->
+		<div class="index-flow">
+			<ul>
+				<li><em class="icons early"></em>前期策划沟通<br/>COMMUNICATIONS</li>
+				<li><em class="icons design"></em>视觉及交互设计<br/>VISUAL AND DESIGN</li>
+				<li><em class="icons html"></em>前端表现及功能开发<br/>HTML/CSS/TLoan</li>
+				<li><em class="icons test"></em>测试调整阶段<br/>ADJUSTMENT/TEST</li>
+			</ul>
+		</div>
+		<!--制作流程end-->
+	</div>
+</div>
+<!--公告联系方式end-->
+<!--安全理念-->
+<div class="wl ideabox">
+	<div class="til">
+		<a href="#js" class="s">技术架构</a><a href="#aq" class="s">安全保障</a><a href="#sj" class="s">数据库设计</a><a href="#xtaq" class="s">系统安全</a>
+	</div>
+	<script type="text/javascript" language="javascript">
+            $(document).ready(function () {
+                $(".s").anchorGoWhere({ target: 1 });
+            });
+        </script>
+	<div class="main">
+		<div id="js" class="item">
+			<div class="comt">
+				<h2 class="c2">技术架构</h2>
+				<span>Technical Architecture </span>
+			</div>
+			<img src={% static 'picture/idea_1.png' %}/>
+		</div>
+		<div id="aq" class="item">
+			<div class="comt">
+				<h2 class="c2">安全保障</h2>
+				<span>Safety & security </span>
+				<p>
+					太象p2p网贷系统能有效处理页面格式，保证页面及表格的完整性。安全检查应用于每一行代码中，可自动屏蔽恶意代码和跨站脚本攻击。独有的全程操作记录，使系统运行情况随时可有据可查。缓存、模板、日志等机制，保障系统在稳定，优化状态下运行。
+				</p>
+			</div>
+			<img src={% static 'picture/idea_2_1.jpg' %}/>
+			<img src={% static 'picture/idea_2_2.jpg' %}/>
+		</div>
+		<div id="sj" class="item">
+			<div class="comt">
+				<h2 class="c2">数据库设计</h2>
+				<span>Database  Design</span>
+				<p>
+					指对于一个给定的应用环境，构造最优的数据库模式，建立数据库及其应用系统，使之能够有效地存储数据，满足各种用户的应用需求（信息要求和处理要求）
+				</p>
+			</div>
+			<img src={% static 'picture/idea_3_1.jpg' %}/>
+		</div>
+		<div id="xtaq" class="item">
+			<div class="comt">
+				<h2 class="c2">系统安全</h2>
+				<span>SAFETY</span>
+				<p>
+					太象系统在面对内部的数据库风险，通过部署数据库审计与风险控制系统对数据库的操作行为进行全方位的审计，包括网络平台及其它业务系统执行的数据操作行为、数据库的回应信息，并提供细粒度的审计策略、细粒度的行为检索、合规化的审计报告，为后台数据库的安全运行提供安全保障。通过建立完善的数据库操作访问审计机制，提供全方位的实时审计与风险控制，包括全方位的实时审计、细粒度的行为检索、友好真实的操作过程回放、完备的双向审计、灵活的策略定制、多形式的实时告警、安全事件精确定位、远程访问监控等功能。
+				</p>
+			</div>
+			<img src={% static 'picture/idea_3_2.jpg' %}/>
+		</div>
+	</div>
+</div>
+
+</body>
+{% endblock %}

@@ -1,0 +1,470 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}关于我们{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/map.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<body>
+
+<div class="banner" style="background: url({% static 'images/ser_banner.jpg' %}) center no-repeat;height:400px">
+</div>
+<!--公告联系方式-->
+<div class="index-graybox item" id="flow">
+	<div class="wl index-graycon">
+		<!--联系方式-->
+		<div class="index-contact">
+			<a target='_blank' href="#">
+			<em class="icons ico-phone"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>咨询热线：</span><em>400-123-123</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+			<a target='_blank' href="#">
+			<em class="icons ico-qq"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>企业QQ：</span><em>705301804</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+			<a href="#">
+			<em class="icons ico-msg"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>邮箱地址：</span><em>705301804@qq.com</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+		</div>
+		<!--联系方式end-->
+		<!--制作流程-->
+		<div class="index-flow">
+			<ul>
+				<li><em class="icons early"></em>前期策划沟通<br/>COMMUNICATIONS</li>
+				<li><em class="icons design"></em>视觉及交互设计<br/>VISUAL AND DESIGN</li>
+				<li><em class="icons html"></em>前端表现及功能开发<br/>HTML/CSS/TLoan</li>
+				<li><em class="icons test"></em>测试调整阶段<br/>ADJUSTMENT/TEST</li>
+			</ul>
+		</div>
+		<!--制作流程end-->
+	</div>
+</div>
+<!--公告联系方式end-->
+<!--安全理念-->
+<div class="wl serbox">
+	<div class="main">
+		<!--我们的服务-->
+		<div class="comt">
+			<h2 class="c2">为什么选择太象系统?</h2>
+			<p>
+				当今互联网金融行业火爆，互联网金融现在以网络借贷平台最为突出，太象网贷系统有如下优势：
+			</p>
+		</div>
+		<div class="comt-2">
+			<div class="detailbox pos-1">
+				<div class="line">
+					0<span class="black">1</span> 银行级安全保障
+				</div>
+				<p>
+					产品从安全认证，数据安全、DDOS防护等各方面进行严密设计
+				</p>
+			</div>
+			<div class="detailbox pos-2">
+				<div class="line">
+					0<span class="black">2</span> 技术实力强
+				</div>
+				<p>
+					公司有几十余名专业的软件开发工程师，有丰富的软件开发经验
+				</p>
+			</div>
+			<div class="detailbox pos-3">
+				<div class="line">
+					0<span class="black">3</span> 自主研发
+				</div>
+				<p>
+					TLoan系统是公司历时六个月开发、三个月测试所推出的一款自主研发的网贷系统
+				</p>
+			</div>
+			<div class="detailbox pos-4">
+				<div class="line">
+					0<span class="black">4</span> 系统成熟度高
+				</div>
+				<p>
+					经过两年多时间的发展和更新，TLoan系统已经非常成熟，不会出现重大故障
+				</p>
+			</div>
+			<div class="detailbox pos-5">
+				<div class="line">
+					0<span class="black">5</span> 安全的网站框架
+				</div>
+				<p>
+					TLoan系统采用安全快速的网站架构，充分保证用户网站资金安全
+				</p>
+			</div>
+		</div>
+		<!--服务项目及价格-->
+		<div class="comt">
+			<h2 class="c2">服务项目</h2>
+		</div>
+		<img src={% static 'picture/server-xm.jpg' %}/>
+		<table style="display:none;">
+		<tr class="o">
+			<td>
+				 服务项目
+			</td>
+			<td>
+				风格定制版
+			</td>
+			<td>
+				功能定制版
+			</td>
+			<td>
+				资金托管
+			</td>
+			<td>
+				独立开发版
+			</td>
+		</tr>
+		<tr>
+			<td>
+				开发语言
+			</td>
+			<td>
+				.NET C#
+			</td>
+			<td>
+				.NET C#
+			</td>
+			<td>
+				.NET C#
+			</td>
+			<td>
+				.NET C#
+			</td>
+		</tr>
+		<tr>
+			<td>
+				基本板块
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				流转标
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				安全U盾（每个500）
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				债权转让
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				时时财务
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				积分商城
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				手机版
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				多城市
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				服务器代购
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ICP备案代办
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				服务器安全配置
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				上门培训
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				财务模块
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				资金托管
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				免费维护三个月
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				一年内免费升级
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				源代码开源
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10006;
+			</td>
+			<td>
+				&#10004;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				价格
+			</td>
+			<td>
+				20万
+			</td>
+			<td>
+				25万起
+			</td>
+			<td>
+				30万起
+			</td>
+			<td>
+				协商
+			</td>
+		</tr>
+		</table>
+	</div>
+</div>
+</body>
+{% endblock %}
+

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}关于我们{% endblock %}
+
+{% block body %}
+<body id="body">
+
+<!--banner-->
+<div class="banner" style="background: url({% static 'images/case_banner.jpg' %}) center no-repeat;height:400px">
+</div>
+<!--banner end-->
+<!--公告联系方式-->
+<div class="index-graybox item" id="flow">
+	<div class="wl index-graycon">
+		<!--联系方式-->
+		<div class="index-contact">
+			<a target='_blank' href="#">
+			<em class="icons ico-phone"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>咨询热线：</span><em>400-123-123</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+			<a target='_blank' href="#">
+			<em class="icons ico-qq"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>企业QQ：</span><em>705301804</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+			<a href="#">
+			<em class="icons ico-msg"></em>
+			<div class="contact-text">
+				<p class="con-text">
+					<span>邮箱地址：</span><em>705301804@qq.com</em>
+				</p>
+				<p class="con-arrow">
+					<em class="icons ico-con-arrow"></em>
+				</p>
+			</div>
+			</a>
+		</div>
+		<!--联系方式end-->
+		<!--制作流程-->
+		<div class="index-flow">
+			<ul>
+				<li><em class="icons early"></em>前期策划沟通<br/>COMMUNICATIONS</li>
+				<li><em class="icons design"></em>视觉及交互设计<br/>VISUAL AND DESIGN</li>
+				<li><em class="icons html"></em>前端表现及功能开发<br/>HTML/CSS/TLoan</li>
+				<li><em class="icons test"></em>测试调整阶段<br/>ADJUSTMENT/TEST</li>
+			</ul>
+		</div>
+		<!--制作流程end-->
+	</div>
+</div>
+<!--公告联系方式end-->
+<!--案例-->
+<div class="wl casebox">
+	<div class="til">
+		<ul id="menu1">
+			<li class="con" onmouseover="setTab(1,0)"><a href="#">最新案例</a></li>
+			<li onmouseover="setTab(1,1)"><a href="#">案例列表</a></li>
+		</ul>
+	</div>
+	<div class="case-in" id="main1">
+		<ul class="block">
+            {% for case in new_caases %}
+                <li class="list">
+			<img src="{{ MEDIA_URL }}{{ case.image }}" width="235" height="390"/>
+                    {{ case.describe }}
+			<span></span>
+			<a class=" icons" href="{{ case.url }}" target="_blank">点击查看</a>
+			</li>
+            {% endfor %}
+
+
+		</ul>
+		<ul>
+            {% for case in cases %}
+                <li class="list">
+			<img src="{{ MEDIA_URL }}{{ case.image }}" width="235" height="390"/>
+                    {{ case.describe}}
+			<span>{{ case.describe }} </span>
+			<a class=" icons" href="{{ case.url }}" target="_blank">点击查看</a>
+			</li>
+            {% endfor %}
+{#        <div>{{ cases.render }}</div>#}
+		</ul>
+	</div>
+</div>
+<!--案例end-->
+</body>
+{% endblock %}

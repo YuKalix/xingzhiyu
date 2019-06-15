@@ -23,7 +23,12 @@ from django.urls import path, include,re_path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.index.urls',namespace='index')),
+    path('success_case/', include('apps.success_case.urls', namespace='success_case')),
+    path('server/', include('apps.server.urls',namespace='server')),
     path('new/', include('apps.new.urls',namespace='new')),
+    path('safe/', include('apps.safe.urls',namespace='safe')),
+    path('about_us/', include('apps.about_us.urls',namespace='about_us')),
+
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
