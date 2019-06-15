@@ -2,12 +2,12 @@
 <div id="heaher" class="item">
 	<div class="inner wl">
 		<div class="logo">
-			<a href="" title="{{ logo.describe }}"><img src="{{ MEDIA_URL }}{{ logo.image }}" width="200" height="80"></a>
+			<a href="" title="{{ logo.describe }}"><img src="{{ MEDIA_URL }}{{ logo.image }}" width="200" height="80" alt="这里是公司logo"></a>
 		</div>
 		<div class="headnav" id="navigate">
 			<ul>
 				<li><a href="{% url 'index:index' %}">首页</a></li>
-				<li><a href="productcentre.html">产品中心</a></li>
+				<li><a href="/" onclick="alert('暂未开发,敬请期待')">产品中心</a></li>
 				<li><a {% ifequal request.path '/success_case/' %} class="sel" {% endifequal %} href="{% url 'success_case:index' %}">成功案例</a></li>
 				<li><a {% ifequal request.path '/server/' %} class="sel" {% endifequal %}href="{% url 'server:index' %}">服务项目</a></li>
 				<li><a {% ifequal request.path '/safe/' %} class="sel" {% endifequal %} href="{% url 'safe:index' %}">安全理念</a></li>

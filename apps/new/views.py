@@ -63,6 +63,11 @@ class NewArticle(View):
 
         # 获取点击文章
         article = New.objects.filter(id=new_id)
+        # 浏览该文章浏览量+1
+        read_num = article[0].read_num + 1
+        article.update(read_num=read_num)
+
+
         return render(request, 'new.html', {
             'information': information,
             'logo': logo,
